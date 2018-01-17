@@ -16,6 +16,10 @@ urlpatterns = [
 
     path('album/<int:pk>/', views.AlbumUpdate.as_view(), name='album-update'),
     path('album/<int:pk>/delete/', views.AlbumDelete.as_view(), name='album-delete'),
+
+    #/music/album/song/add/
+    path('album/song/add/<int:pk>', views.SongCreate.as_view(), name='song-add'),
+    path('album/song/delete/<int:pk>/', views.SongDelete.as_view(), name='song-delete'),
     
     
 ]

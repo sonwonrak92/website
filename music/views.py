@@ -22,11 +22,19 @@ class AlbumUpdate(UpdateView):
     model = Album
     fields = ['artist', 'artist_title', 'genre', 'album_logo']
 
-
 class AlbumDelete(DeleteView):
     model = Album
     success_url = reverse_lazy('music:index')
 
+class SongCreate(CreateView):
+    model = Song
+    fields = ['album', 'file_type', 'song_title', 'is_favorite']
+
+class SongDelete(DeleteView):
+    model = Song
+    
+    success_url = reverse_lazy('music:index' )    
+     
 # from django.http import HttpResponse, Http404
 # from django.shortcuts import render, get_object_or_404
 
