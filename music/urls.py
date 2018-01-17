@@ -21,5 +21,8 @@ urlpatterns = [
     path('album/song/add/<int:pk>', views.SongCreate.as_view(), name='song-add'),
     path('album/song/delete/<int:pk>/', views.SongDelete.as_view(), name='song-delete'),
     
+
+    #   <a href="{% url 'music:song-add' album.id %}">Add New Song</a>
+    
     
 ]
